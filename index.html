@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resultados da Prova</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div class="container">
+    <h1>Resultados da Competição - LIFE220 - Etapa Camboinhas</h1>
+
+    <div class="filtros">
+        <input type="text" id="filtroNome" placeholder="Buscar por nome..." />
+        <select id="filtroModalidade">
+            <option value="">Todas as Modalidades</option>
+        </select>
+        <select id="filtroSexo">
+            <option value="">Todos os Sexos</option>
+            <option value="MASCULINO">Masculino</option>
+            <option value="FEMININO">Feminino</option>
+            <option value="MISTO">Misto</option>
+        </select>
+        <select id="filtroCategoria">
+            <option value="">Todas as Categorias</option>
+        </select>
+    </div>
+
+    <div class="tabela-wrapper">
+        <table id="tabelaResultados">
+            <thead>
+                <tr>
+                    <th>Pos. Geral</th>
+                    <th>Pos. Categoria</th>
+                    <th>Nome</th>
+                    <th>Modalidade</th>
+                    <th>Categoria</th>
+                    <th>Tempo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela"></tbody>
+        </table>
+    </div>
+
+    <div id="loading">Carregando resultados...</div>
+</div>
+
+<div id="template-certificado" style="display: none;">
+  <div class="certificado" id="certificado-gerado">
+    <h1 class="cert-title">CERTIFICADO DE CONCLUSÃO</h1>
+    <p class="cert-text">Certificamos que</p>
+    <h2 class="cert-name" id="cert-nome">NOME DO ATLETA</h2>
+    <p class="cert-text">
+      completou a prova <strong id="cert-modalidade">MODALIDADE</strong> na categoria <strong id="cert-categoria">CATEGORIA</strong>.
+    </p>
+    <p class="cert-text">
+      Alcançando a #<strong id="cert-posicao">POSIÇÃO GERAL</strong> posição geral
+      <span id="linha-categoria"> e a #<strong id="cert-posicao-categoria">POSIÇÃO CATEGORIA</strong> posição na categoria.</span>
+    </p>
+    <p class="cert-text cert-date" id="cert-data">DATA DO EVENTO</p>
+
+    <div class="cert-logo-box">
+      <img src="logo.png" alt="Logo do Evento" class="cert-logo">
+      <p class="cert-footer">LIFE 220 - ETAPA CAMBOINHAS</p>
+    </div>
+  </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
